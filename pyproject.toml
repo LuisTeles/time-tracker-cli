@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "time-tracker-cli"
+version = "0.1.0"
+description = "A CLI time management tool"
+authors = ["LuisTeles <devzluis@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "timetracker", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+rich = "^14.0.0"
+click = "^8.1.8"
+sqlite-utils = "^3.38"
+matplotlib = "^3.10.1"
+python-dateutil = "^2.9.0"
+questionary = "^2.1.0"
+textual = "^3.1.1"
+plotext = "^5.3.2"
+plotly = "^6.0.1"
+pendulum = "^3.1.0"
+pandas = "^2.2.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-mock = "^3.14.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+mypy = "^1.15.0"
+
+[tool.poetry.scripts]
+timetracker = "timetracker.cli.main:cli"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
